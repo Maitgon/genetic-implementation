@@ -1,0 +1,55 @@
+Input1.
+
+Number of Laws:
+6
+
+Party Seats:
+A : 10
+B : 15
+C : 10
+D : 15
+E : 12
+
+Leyes:
+
+Law 1:
+A : 1
+B : 20
+C : 15
+D : -10
+E : -15
+
+Law 2:
+A : 20
+B : -20
+C : -15
+D : 0
+E : -1
+
+Law 3:
+A : 10
+B : -15
+C : -1
+D : 0
+E : 10
+
+Law 4:
+A : 1
+B : -20
+C : 20
+D : 5
+E : 0
+
+Law 5:
+A : 20
+B : -1
+C : 0
+D : 10
+E : -10
+
+Law 6:
+A : 10
+B : 5
+C : -5
+D : -10
+E : 0
