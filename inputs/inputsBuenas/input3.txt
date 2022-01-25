@@ -1,0 +1,106 @@
+Input 1,4,7,10,13,16,19,22,25.
+
+Number of laws:
+9
+
+Party Seats:
+GCUP-EC-GC : 34
+GCs : 9
+GEH Bildu : 5
+GP : 88
+GR : 13
+GS : 120
+GV : 6
+GVOX : 52
+
+Leyes:
+
+Law 1
+GCUP-EC-GC : -5
+GCs : 10
+GEH Bildu : -8
+GP : -5
+GR : -6
+GS : -4
+GV (EAJ-PNV) : -4
+GVOX : 9
+
+Law 2
+GCUP-EC-GC : 7
+GCs : -8
+GEH Bildu : 0
+GP : -7
+GR : 8
+GS : 6
+GV (EAJ-PNV) : 5
+GVOX : -10
+
+Law 3
+GCUP-EC-GC : 3
+GCs : 3
+GEH Bildu : 0
+GP : 0
+GR : 10
+GS : 9
+GV (EAJ-PNV) : 6
+GVOX : -9
+
+Law 4
+GCUP-EC-GC : -4
+GCs : 7
+GEH Bildu : -6
+GP : 4
+GR : -4
+GS : -9
+GV (EAJ-PNV) : 0
+GVOX : 10
+
+Law 5
+GCUP-EC-GC : 5
+GCs : 4
+GEH Bildu : 7
+GP : 4
+GR : 8
+GS : 8
+GV (EAJ-PNV) : 7
+GVOX : -4
+
+Law 6
+GCUP-EC-GC : -7
+GCs : 9
+GEH Bildu : 0
+GP : 3
+GR : -9
+GS : -9
+GV (EAJ-PNV) : -10
+GVOX : 10
+
+Law 7
+GCUP-EC-GC : 4
+GCs : 8
+GEH Bildu : 0
+GP : 0
+GR : 8
+GS : 8
+GV (EAJ-PNV) : 5
+GVOX : 0
+
+Law 8
+GCUP-EC-GC : -6
+GCs : -9
+GEH Bildu : -8
+GP : 0
+GR : -7
+GS : -9
+GV (EAJ-PNV) : -10
+GVOX : 6
+
+Law 9
+GCUP-EC-GC : 8
+GCs : 9
+GEH Bildu : 4
+GP : 10
+GR : 6
+GS : 7
+GV (EAJ-PNV) : 5
+GVOX : 4

@@ -38,7 +38,7 @@ formLawAll n gen
 
 main :: IO ()
 main = do
-    let firstPart = "Input5.\n\nNumber of Laws:\n" ++ show nCandidates ++ "\n\n"
+    let firstPart = "Input5.\n\nNumber of Laws:\n" ++ show totalLaws ++ "\n\n"
 
     gen <- newStdGen
 

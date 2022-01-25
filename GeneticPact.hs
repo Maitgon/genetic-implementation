@@ -161,7 +161,7 @@ makeChild (x:xs) (y:ys) gen = if ran == 1
     where (ran, new) = randomR (1 :: Int, 2 :: Int) gen
 
 mutFactor :: Float
-mutFactor = 0.02
+mutFactor = 0.01
 
 mutate :: Solucion -> IO Solucion
 mutate sol = do
