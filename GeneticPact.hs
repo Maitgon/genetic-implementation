@@ -160,21 +160,18 @@ makeChild (x:xs) (y:ys) gen = if ran == 1
                               else y : makeChild xs ys new
     where (ran, new) = randomR (1 :: Int, 2 :: Int) gen
 
-mutFactor :: Float
-mutFactor = 0.01
-
-mutate :: Solucion -> IO Solucion
-mutate sol = do
+mutate :: Solucion -> Float -> IO Solucion
+mutate sol mutFactor = do
     let tSol = transpose sol
     gen <- newStdGen
-    return $ transpose $ mutateAux 0 (length sol) (length $ head sol) tSol gen
+    return $ transpose $ mutateAux 0 (length sol) (length $ head sol) tSol gen mutFactor
 
-mutateAux :: Int -> Int -> Int -> Solucion -> StdGen -> Solucion
-mutateAux count nLaws mParties sol gen 
+mutateAux :: Int -> Int -> Int -> Solucion -> StdGen -> Float -> Solucion
+mutateAux count nLaws mParties sol gen mutFactor
     | numb < mutFactor && count /= mParties = mutateAux (count+1) nLaws mParties
                                                         (changeList segundo newSecond newSol) 
-                                                        new''
-    | count /= mParties = mutateAux (count+1) nLaws mParties sol gen'
+                                                        new'' mutFactor
+    | count /= mParties = mutateAux (count+1) nLaws mParties sol gen' mutFactor
     | otherwise = sol
     where (numb, gen') = random gen
 
@@ -216,8 +213,8 @@ getLaw :: String -> M.Map String Int
 getLaw = getPartySeats
 
 
-geneticPact :: Int -> String -> IO Int
-geneticPact iter input = do
+geneticPact :: Int -> String -> Float -> IO Int
+geneticPact iter input mutFactor = do
     --input <- readFile "inputs/input1.txt"
     --putStrLn input
     let _:i1:i2:_:xs = splitOn "\n\n" input
@@ -229,7 +226,7 @@ geneticPact iter input = do
     --print laws
     let puntosM = map M.elems laws
     --print puntosM
-    --let votoInicial = solInicial puntosM
+    let votoInicial = solInicial puntosM
     --print $ solInicial puntosM
     let seats = M.elems partySeats
     --let algo = multRow votoInicial seats
@@ -238,7 +235,7 @@ geneticPact iter input = do
     --print approved
     --let orig = originalPoints puntosM seats
     --print orig
-    --randomInit <- initialization2 (length laws) (length seats) puntosM
+    randomInit <- initialization2 (length laws) (length seats) puntosM
     --print randomInit
     --let newPoints = points randomInit puntosM seats
     --print newPoints
@@ -276,7 +273,7 @@ geneticPact iter input = do
 
                 -- Mutation here
 
-                mutate child 
+                mutate child mutFactor
 
                 -- return child
 
@@ -288,7 +285,7 @@ geneticPact iter input = do
     --print $ points votoInicial puntosM seats
     --print $ points best puntosM seats
     --print $ isValidPact puntosM seats best
-    --print $ whoInPact best puntosM
+    --print $ fitnessFunc puntosM seats best
     return $ fitnessFunc puntosM seats best
 
 --main :: IO ()
